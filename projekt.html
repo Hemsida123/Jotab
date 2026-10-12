@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Projekt – fönsterbyte och dörrbyte före och efter | Jotab</title>
+<meta name="description" content="Verkliga fönster- och dörrbyten med bilder före, under och efter. Enplansvilla i Kisa, tegelvillor, träpanelvillor och ytterdörrar.">
+<meta name="theme-color" content="#0B1120">
+<link rel="canonical" href="https://jotab.nu/projekt.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:site_name" content="Jotab Fönster &amp; Dörrar">
+<meta property="og:title" content="Projekt – fönsterbyte och dörrbyte före och efter | Jotab">
+<meta property="og:description" content="Verkliga fönster- och dörrbyten med bilder före, under och efter. Enplansvilla i Kisa, tegelvillor, träpanelvillor och ytterdörrar.">
+<meta property="og:image" content="https://jotab.nu/assets/window-red-facade-BJf-30tF.jpg">
+<link rel="preconnect" href="https://jotab.nu">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600&amp;display=swap"></noscript>
+<style>
+:root{
+  --paper:#FFFFFF; --paper-2:#F6F8FC; --paper-3:#E9EEF7;
+  --ink:#0D1424;        /* blåsvart, inte neutralt svart — hela sidan ska läsa som dagsljus genom glas */
+  --mute:#4C566B; --line:#DEE4EE; --line-2:#C3CCDC; --edge:#6F7A8E;
+  --night:#0B1120; --night-2:#121B2E; --hair:rgba(255,255,255,.12); --hair-2:rgba(255,255,255,.22);
+  --dim:#9AA5B8; --dim-2:#808C9F;
+  --blue:#4265E5;       /* pixelsamplad ur deras logotyp-SVG: rgb(66,101,229). 4,97:1 på vitt. */
+  --blue-d:#2A47B8;     /* länktext med marginal: 7,80:1 */
+  --blue-on:#8FA6F2;    /* accenttext på mörkt: 7,98:1 */
+  --blue-lt:#B7C4F5;    /* logotypens ljusaste ton */
+  --disp:'Instrument Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif;
+  --gut:clamp(20px,5vw,72px); --maxw:1320px; --nav:76px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:var(--paper)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+/* height:auto krävs — annars vinner img-taggens height-attribut över aspect-ratio */
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-family:var(--disp);font-weight:600;line-height:1.08;letter-spacing:-.028em}
+p{margin:0}ul,ol{margin:0;padding:0;list-style:none}
+::selection{background:var(--blue);color:#fff}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gut)}
+.sec{padding-block:clamp(64px,8vw,128px)}
+section[id],article[id]{scroll-margin-top:92px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:400;font-weight:600}
+.skip:focus{left:0}
+
+/* ---------- MOTIVET: karmen ----------
+   Sektionsetiketten bär två hörnmarkeringar — samma form som ett fönsterfoder.
+   Den upprepas som hörn på bildramar och som delade 1px-linjer i rutnäten. */
+.kic{position:relative;display:inline-block;font-weight:600;font-size:11.5px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--blue-d);padding:7px 0 7px 18px}
+.kic::before,.kic::after{content:"";position:absolute;left:0;width:9px;height:9px;border-color:var(--blue)}
+.kic::before{top:0;border-left:1.5px solid;border-top:1.5px solid}
+.kic::after{bottom:0;border-left:1.5px solid;border-bottom:1.5px solid}
+
+/* ---------- knappar ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;
+  font-family:var(--disp);font-size:15.5px;font-weight:600;letter-spacing:-.008em;padding:15px 26px;border-radius:2px;
+  border:1px solid transparent;cursor:pointer;min-height:52px;
+  transition:transform .25s var(--ease),background .25s,color .25s,border-color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{flex:none}
+.btn .ar{display:inline-block;transition:transform .3s var(--ease)}
+.btn:hover .ar{transform:translateX(5px)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-d)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:#000}
+/* Kontrollkanter måste klara 3:1 (WCAG 1.4.11). --line ger 1,28 och duger bara till
+   dekorativa rutnätslinjer; --edge ger 4,33. */
+.btn-line{border-color:var(--edge);color:var(--ink);background:transparent}
+.btn-line:hover{border-color:var(--ink);background:var(--paper-2)}
+.btn-dim{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-dim:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.btn-lg{padding:18px 32px;min-height:58px;font-size:16.5px}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:200;height:var(--nav);display:flex;align-items:center;color:#fff;
+  border-bottom:1px solid transparent;transition:background .4s var(--ease),border-color .4s,color .4s}
+.nav .wrap{display:flex;align-items:center;gap:18px;width:100%;position:relative;z-index:1}
+.nav::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:1;transition:opacity .4s var(--ease);
+  background:linear-gradient(180deg,rgba(7,11,20,.62) 0%,rgba(7,11,20,.26) 65%,rgba(7,11,20,0) 100%)}
+.nav.solid{background:rgba(255,255,255,.93);backdrop-filter:saturate(1.6) blur(14px);
+  border-bottom-color:var(--line);color:var(--ink)}
+.nav.solid::before{opacity:0}
+/* Logotypfilen är redan genomskinlig (640×384, bläcket är exakt rgb(66,101,229)).
+   Ingen vit bricka alltså: blå mot ljus botten, helvit mot mörk. Filtret tonas
+   i takt med att menyn blir vit, så bytet syns inte som ett hopp. */
+.mark{display:inline-flex;align-items:center;margin-right:auto;min-height:48px;text-decoration:none}
+.mark img{width:clamp(118px,13vw,152px);height:auto;transition:filter .4s var(--ease)}
+.nav:not(.solid) .mark img,.foot .mark img{filter:brightness(0) invert(1)}
+.menu{display:flex;gap:26px;align-items:center}
+.menu > a{text-decoration:none;font-size:14.5px;font-weight:500;opacity:.9;padding:6px 0;min-height:26px;
+  display:inline-flex;align-items:center;position:relative}
+.menu > a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--blue);
+  transition:right .3s var(--ease)}
+.menu > a:hover::after,.menu > a[aria-current="page"]::after{right:0}
+.nav:not(.solid) .menu > a::after{background:#fff}
+.navtel{display:inline-flex;align-items:center;gap:9px;background:var(--blue);color:#fff;text-decoration:none;
+  font-family:var(--disp);font-weight:600;font-size:15px;padding:0 20px;min-height:46px;border-radius:2px;
+  white-space:nowrap;transition:background .25s}
+.navtel:hover{background:var(--blue-d)}
+.burger{display:none;width:46px;height:46px;align-items:center;justify-content:center;background:none;border:0;
+  color:inherit;cursor:pointer;padding:0}
+.burger i{display:block;width:21px;height:1.5px;background:currentColor;position:relative}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:21px;height:1.5px;background:currentColor}
+.burger i::before{top:-6px}.burger i::after{top:6px}
+
+.drawer{position:fixed;inset:0;z-index:300;background:var(--paper);color:var(--ink);display:flex;flex-direction:column;
+  padding:18px var(--gut) 28px;transform:translateY(-100%);transition:transform .45s var(--ease);overflow-y:auto}
+.drawer.open{transform:none}
+.drawer-top{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;margin-bottom:24px}
+.drawer-top img{width:150px;height:auto;filter:none}
+.drawer-top button{background:none;border:1px solid var(--line-2);color:var(--ink);font-family:var(--disp);
+  font-weight:600;font-size:14px;padding:11px 17px;border-radius:2px;cursor:pointer;min-height:44px}
+.drawer nav{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.drawer nav a{display:flex;align-items:baseline;gap:16px;text-decoration:none;font-family:var(--disp);font-weight:600;
+  font-size:clamp(22px,5vw,30px);letter-spacing:-.03em;padding:18px 0;border-bottom:1px solid var(--line);min-height:62px}
+.drawer nav a em{font-style:normal;font-size:11px;font-weight:600;letter-spacing:.16em;color:var(--blue);
+  width:26px;flex:none}
+.drawer-foot{margin-top:auto;padding-top:26px;display:flex;flex-wrap:wrap;gap:10px}
+.drawer-foot .btn{flex:1 1 180px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
+  overflow:hidden;background:var(--night);color:#fff}
+.hero.short{min-height:min(60svh,520px)}
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 56%;
+  transform:scale(1.06);animation:settle 1.6s var(--ease) forwards}
+/* Bilden lägger sig till rätta när sidan landat. En rörelse, en gång, 1,6 s. */
+@keyframes settle{to{transform:scale(1)}}
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(7,11,20,.52) 0%,rgba(7,11,20,.14) 24%,rgba(7,11,20,.55) 58%,rgba(7,11,20,.90) 100%),
+  linear-gradient(97deg,rgba(7,11,20,.55) 0%,rgba(7,11,20,.12) 62%,rgba(7,11,20,0) 100%)}
+.hero-in{position:relative;z-index:2;width:100%;padding-top:calc(var(--nav) + 40px)}
+.hero .kic{color:var(--blue-lt)}
+.hero .kic::before,.hero .kic::after{border-color:var(--blue-lt)}
+.hero h1{font-size:clamp(34px,5.9vw,82px);letter-spacing:-.038em;line-height:1.02;max-width:17ch;
+  margin-top:clamp(14px,1.8vw,22px)}
+.hero h1 em{font-style:normal;color:var(--blue-lt)}
+.hero-sub{font-size:clamp(16px,1.4vw,20px);max-width:56ch;margin-top:clamp(16px,1.9vw,24px);color:rgba(255,255,255,.93)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(22px,2.5vw,32px)}
+.hero-main{padding-bottom:clamp(28px,3.4vw,46px)}
+.tp{display:inline-flex;align-items:center;gap:10px;margin-top:16px;font-size:14.5px;color:rgba(255,255,255,.9)}
+.tp b{font-family:var(--disp);font-weight:600;font-size:17px;color:#fff}
+.tp .stars{color:var(--blue-lt);letter-spacing:.1em}
+
+/* specremsa — delade linjer, inga kort */
+.strip{border-top:1px solid var(--hair-2);display:flex;overflow-x:auto;scrollbar-width:none;
+  -ms-overflow-style:none;overscroll-behavior-x:contain}
+.strip::-webkit-scrollbar{display:none}
+.strip div{flex:1 0 auto;min-width:min(214px,64vw);padding:18px 22px 22px;border-left:1px solid var(--hair);color:#fff}
+.strip div:first-child{border-left:0;padding-left:0}
+.strip dt{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-lt);margin-bottom:7px}
+.strip dd{margin:0;font-family:var(--disp);font-weight:600;font-size:16.5px;letter-spacing:-.02em;line-height:1.3}
+
+/* ---------- rubrikblock ---------- */
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,72px);align-items:end;
+  margin-bottom:clamp(32px,4vw,60px)}
+.head h2{font-size:clamp(28px,4vw,58px);letter-spacing:-.036em;max-width:17ch;margin-top:14px}
+.head p{font-size:clamp(16.5px,1.5vw,19px);color:var(--mute);max-width:52ch}
+@media(max-width:820px){.head{grid-template-columns:1fr;gap:16px;align-items:start}}
+
+/* ---------- spröjsrutnät: delade linjer, inga flytande kort ---------- */
+.grid{display:grid;border:1px solid var(--line);border-radius:2px;overflow:hidden;background:var(--line)}
+.grid > *{background:var(--paper)}
+.g2{grid-template-columns:repeat(2,1fr);gap:1px}
+.g3{grid-template-columns:repeat(3,1fr);gap:1px}
+.g4{grid-template-columns:repeat(4,1fr);gap:1px}
+@media(max-width:1000px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.g4,.g3,.g2{grid-template-columns:1fr}}
+.cell{padding:clamp(22px,2.6vw,34px);display:flex;flex-direction:column;gap:10px;
+  transition:background .3s var(--ease)}
+a.cell{text-decoration:none}
+a.cell:hover{background:var(--paper-2)}
+.cell h3{font-size:clamp(19px,2vw,24px);letter-spacing:-.03em}
+.cell p{font-size:15.5px;color:var(--mute);line-height:1.62}
+.cell .go{margin-top:auto;padding-top:14px;font-family:var(--disp);font-weight:600;font-size:14.5px;color:var(--blue-d);
+  display:inline-flex;align-items:center;gap:8px;min-height:26px}
+.cell .go .ar{transition:transform .3s var(--ease)}
+a.cell:hover .go .ar{transform:translateX(5px)}
+.cell b.big{font-family:var(--disp);font-size:clamp(26px,3vw,40px);font-weight:600;letter-spacing:-.035em;line-height:1}
+
+/* ---------- bild med karmhörn ---------- */
+.framed{position:relative}
+.framed img{width:100%;display:block}
+.framed::before,.framed::after{content:"";position:absolute;width:26px;height:26px;pointer-events:none;
+  border-color:var(--blue);opacity:0;transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.framed::before{left:-1px;top:-1px;border-left:1.5px solid;border-top:1.5px solid;transform:translate(6px,6px)}
+.framed::after{right:-1px;bottom:-1px;border-right:1.5px solid;border-bottom:1.5px solid;transform:translate(-6px,-6px)}
+.framed.in::before,.framed.in::after{opacity:1;transform:none}
+
+/* ---------- före/efter-dragreglage ---------- */
+.ba{position:relative;overflow:hidden;background:var(--paper-3);touch-action:pan-y;user-select:none;
+  border:1px solid var(--line);border-radius:2px;aspect-ratio:3/4}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .after{clip-path:inset(0 0 0 var(--p,50%))}
+.ba .bar{position:absolute;top:0;bottom:0;left:var(--p,50%);width:2px;background:#fff;
+  box-shadow:0 0 0 1px rgba(11,17,32,.22);transform:translateX(-1px);pointer-events:none}
+.ba .knob{position:absolute;top:50%;left:var(--p,50%);width:46px;height:46px;border-radius:50%;background:#fff;
+  box-shadow:0 2px 14px rgba(11,17,32,.3);transform:translate(-50%,-50%);display:grid;place-items:center;
+  pointer-events:none}
+.ba .knob::before{content:"";width:16px;height:9px;background:var(--blue);
+  clip-path:polygon(0 50%,34% 0,34% 32%,66% 32%,66% 0,100% 50%,66% 100%,66% 68%,34% 68%,34% 100%)}
+.ba input[type=range]{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.ba .tag{position:absolute;top:12px;font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:#fff;background:rgba(11,17,32,.74);padding:7px 11px;border-radius:2px;pointer-events:none}
+.ba .tag.l{left:12px}.ba .tag.r{right:12px}
+.ba-cap{margin-top:12px;font-size:14.5px;color:var(--mute)}
+
+/* ---------- före/efter som par ----------
+   Dragreglaget kräver att de två bilderna är tagna ur samma vinkel. Där kunden
+   fotograferat från olika håll ställs bilderna i stället sida vid sida — samma
+   delade 1px-linje som i rutnäten, så att paret läser som en enhet. */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:2px;overflow:hidden}
+/* Under 620px blir två kolumner 175px breda — för smalt för att bedöma ett fönster.
+   Då staplas paret i stället. */
+@media(max-width:620px){.cmp{grid-template-columns:1fr}}
+.cmp figure{margin:0;position:relative;background:var(--paper-3)}
+.cmp img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.cmp figcaption{position:absolute;top:12px;left:12px;font-family:var(--disp);font-weight:600;font-size:11px;
+  letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(11,17,32,.74);padding:7px 11px;
+  border-radius:2px}
+
+/* ---------- projekt ---------- */
+.proj{border-top:1px solid var(--line);padding-top:clamp(28px,3.4vw,46px);margin-top:clamp(28px,3.4vw,46px)}
+.proj:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.proj-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(18px,3vw,56px);
+  align-items:start;margin-bottom:clamp(20px,2.4vw,30px)}
+@media(max-width:860px){.proj-head{grid-template-columns:1fr;gap:14px}}
+.proj-head h3{font-size:clamp(23px,2.9vw,36px);letter-spacing:-.034em}
+.proj-head .meta{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:12px;font-size:13.5px;color:var(--mute)}
+.proj-head .meta span{display:inline-flex;align-items:center;gap:8px}
+.proj-head .meta span::before{content:"";width:5px;height:5px;background:var(--blue);flex:none}
+.proj-head p{color:var(--mute);font-size:16.5px;line-height:1.68}
+.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:2px;overflow:hidden}
+@media(max-width:860px){.shots{grid-template-columns:repeat(2,1fr)}}
+.shots img{width:100%;aspect-ratio:3/4;object-fit:cover;background:var(--paper);
+  transition:transform .8s var(--ease),filter .5s var(--ease)}
+.shots a{display:block;overflow:hidden;position:relative}
+.shots a:hover img{transform:scale(1.04)}
+
+/* ---------- process (deras egen, genuint sekventiell) ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:2px;overflow:hidden}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.steps li{background:var(--paper);padding:clamp(22px,2.6vw,32px);display:flex;flex-direction:column;gap:10px}
+.steps .n{font-family:var(--disp);font-size:13px;font-weight:600;letter-spacing:.14em;color:var(--blue-d)}
+.steps h3{font-size:clamp(18px,1.9vw,22px);letter-spacing:-.03em}
+.steps p{font-size:15.5px;color:var(--mute);line-height:1.6}
+
+/* ---------- punktlista ---------- */
+.ticks li{display:grid;grid-template-columns:20px 1fr;gap:13px;padding:12px 0;border-bottom:1px solid var(--line);
+  font-size:16.5px;line-height:1.6;color:var(--mute)}
+.ticks li:last-child{border-bottom:0}
+.ticks li::before{content:"";width:11px;height:11px;margin-top:8px;border-left:1.5px solid var(--blue);
+  border-bottom:1.5px solid var(--blue);transform:rotate(-45deg)}
+.ticks b{color:var(--ink);font-weight:600}
+
+/* ---------- omdömen ---------- */
+.revs{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:2px;overflow:hidden}
+@media(max-width:820px){.revs{grid-template-columns:1fr}}
+.rev{background:var(--paper);padding:clamp(24px,2.8vw,38px);display:flex;flex-direction:column}
+.rev .stars{color:var(--blue);letter-spacing:.1em;font-size:15px;margin-bottom:14px}
+.rev blockquote{margin:0;font-size:clamp(16.5px,1.6vw,19px);line-height:1.6;letter-spacing:-.008em}
+.rev footer{margin-top:auto;padding-top:18px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;
+  font-size:14px;color:var(--mute)}
+.rev footer b{color:var(--ink);font-weight:600}
+.rev footer a{color:var(--blue-d);font-weight:600;min-height:24px;display:inline-flex;align-items:center}
+.score{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 18px;margin-bottom:26px}
+.score b{font-family:var(--disp);font-size:clamp(34px,4.4vw,58px);font-weight:600;letter-spacing:-.04em;line-height:1}
+.score .stars{color:var(--blue);font-size:20px;letter-spacing:.1em}
+.score span{font-size:15.5px;color:var(--mute)}
+
+/* ---------- leverantörer ---------- */
+.vendors{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:2px;overflow:hidden}
+@media(max-width:820px){.vendors{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.vendors{grid-template-columns:repeat(2,1fr)}}
+.vendors div{background:var(--paper);display:grid;place-items:center;padding:clamp(18px,2.2vw,30px);min-height:104px}
+.vendors img{max-height:40px;width:auto;max-width:100%;object-fit:contain;
+  filter:grayscale(1);opacity:.62;transition:filter .4s var(--ease),opacity .4s var(--ease)}
+.vendors div:hover img{filter:none;opacity:1}
+
+/* ---------- band ---------- */
+.band{position:relative;overflow:hidden;padding:clamp(56px,7vw,104px) var(--gut);color:#fff;background:var(--night);
+  display:grid;place-items:center;text-align:center}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.band::after{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(7,11,20,.82) 0%,rgba(7,11,20,.70) 50%,rgba(7,11,20,.90) 100%)}
+.band .inner{position:relative;z-index:2;max-width:min(760px,92vw)}
+.band .kic{color:var(--blue-lt)}
+.band .kic::before,.band .kic::after{border-color:var(--blue-lt)}
+.band h2{font-size:clamp(28px,4.2vw,56px);letter-spacing:-.038em;line-height:1.06;margin-top:14px}
+.band p{margin-top:16px;font-size:clamp(16px,1.5vw,19px);color:rgba(255,255,255,.92);max-width:52ch;margin-inline:auto}
+.band .hero-cta{justify-content:center;margin-top:30px}
+
+/* ---------- områden ---------- */
+.areas{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:2px;overflow:hidden}
+@media(max-width:900px){.areas{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.areas{grid-template-columns:1fr}}
+.areas a{background:var(--paper);padding:clamp(20px,2.4vw,30px);text-decoration:none;display:flex;
+  flex-direction:column;gap:7px;transition:background .3s var(--ease)}
+.areas a:hover{background:var(--paper-2)}
+.areas b{font-family:var(--disp);font-size:19px;font-weight:600;letter-spacing:-.03em}
+.areas span{font-size:14.5px;color:var(--mute)}
+
+/* ---------- kontakt ---------- */
+.cx{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,4.4vw,72px);align-items:start}
+@media(max-width:900px){.cx{grid-template-columns:1fr}}
+.cx dl{margin:0;border-top:1px solid var(--line)}
+.cx .row{display:flex;gap:16px;justify-content:space-between;align-items:baseline;padding:15px 0;
+  border-bottom:1px solid var(--line)}
+.cx dt{margin:0;flex:none;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.cx dd{margin:0;font-size:16.5px;text-align:right}
+.cx dd a{color:var(--blue-d);font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;
+  min-height:24px;display:inline-block;padding-bottom:1px}
+@media(max-width:560px){.cx .row{flex-direction:column;gap:4px}.cx dd{text-align:left}}
+
+/* ---------- footer ---------- */
+.foot{background:var(--night);color:var(--dim);padding-block:clamp(50px,6vw,82px) 28px}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,52px)}
+@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
+.foot h4{color:#fff;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;margin-bottom:16px}
+.foot a{color:var(--dim);text-decoration:none;min-height:26px;display:inline-flex;align-items:center;
+  transition:color .25s}
+.foot a:hover{color:#fff}
+.foot li{padding:3px 0}
+.foot .mark{margin:0 0 18px;display:inline-flex}
+.foot .bio{font-size:15px;line-height:1.65;max-width:40ch}
+.foot-bot{margin-top:clamp(32px,4vw,56px);padding-top:22px;border-top:1px solid var(--hair);
+  display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;font-size:13.5px}
+
+/* ---------- mobil ringremsa ---------- */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:150;display:none;gap:1px;background:var(--hair);
+  padding-bottom:env(safe-area-inset-bottom)}
+.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:9px;min-height:58px;
+  text-decoration:none;font-family:var(--disp);font-weight:600;font-size:15.5px}
+.callbar .c1{background:var(--blue);color:#fff}
+.callbar .c2{background:var(--ink);color:#fff}
+
+/* ---------- rörelse ---------- */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .hero-bg img{animation:none;transform:none}
+  .framed::before,.framed::after{opacity:1;transform:none;transition:none}
+  .btn,.shots img,.cell,.areas a,.vendors img,.menu > a::after{transition:none}
+  .btn:hover,.shots a:hover img{transform:none}
+}
+
+@media(max-width:1080px){.menu{display:none}.burger{display:flex}}
+@media(max-width:620px){
+  body{font-size:16.5px}
+  .navtel span{display:none}
+  .navtel{padding:0 15px;min-width:48px}
+  .callbar{display:flex}
+  main{padding-bottom:58px}
+  .hero-cta .btn{flex:1 1 100%}
+  .strip div{min-width:74vw}
+  .ba .knob{width:40px;height:40px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Hoppa till innehållet</a>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="mark" href="index.html"><img src="https://jotab.nu/assets/logo-main-sm-Cnula_cj.png" alt="Jotab Fönster &amp; Dörrar" width="640" height="384"></a>
+    <nav class="menu" aria-label="Huvudmeny"><a href="index.html">Hem</a><a href="fonster-dorrar.html">Fönster & dörrar</a><a href="klimat.html">Klimat & energi</a><a href="projekt.html" aria-current="page">Projekt</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    <a class="navtel" href="tel:+46103001315"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.3 1.7 5 1.3l1.6 3.2-1.4 1c.6 1.3 1.6 2.3 2.9 2.9l1-1.4 3.2 1.6-.4 1.7c-.2.7-.8 1.1-1.5 1C5.9 10.6 2.7 7.4 2.3 3.2c-.1-.7.3-1.3 1-1.5Z" fill="currentColor"/></svg><span class="num">010-300 13 15</span></a>
+    <button class="burger" id="burger" aria-label="Öppna meny" aria-expanded="false" aria-controls="drawer"><i></i></button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-top">
+    <img src="https://jotab.nu/assets/logo-main-sm-Cnula_cj.png" alt="Jotab Fönster &amp; Dörrar" width="640" height="384">
+    <button id="dclose">Stäng</button>
+  </div>
+  <nav aria-label="Meny"><a href="index.html"><em>01</em>Hem</a><a href="fonster-dorrar.html"><em>02</em>Fönster & dörrar</a><a href="klimat.html"><em>03</em>Klimat & energi</a><a href="projekt.html"><em>04</em>Projekt</a><a href="om-oss.html"><em>05</em>Om oss</a><a href="kontakt.html"><em>06</em>Kontakt</a></nav>
+  <div class="drawer-foot">
+    <a class="btn btn-blue" href="tel:+46103001315"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.3 1.7 5 1.3l1.6 3.2-1.4 1c.6 1.3 1.6 2.3 2.9 2.9l1-1.4 3.2 1.6-.4 1.7c-.2.7-.8 1.1-1.5 1C5.9 10.6 2.7 7.4 2.3 3.2c-.1-.7.3-1.3 1-1.5Z" fill="currentColor"/></svg> <span class="num">010-300 13 15</span></a>
+    <a class="btn btn-line" href="mailto:info@jotab.nu?subject=F%C3%B6rfr%C3%A5gan%20om%20kostnadsfritt%20hembes%C3%B6k%20%E2%80%93%20Jotab&body=Hej%21%0A%0AJag%20vill%20boka%20ett%20kostnadsfritt%20hembes%C3%B6k.%0A%0AIntresserad%20av%20%28f%C3%B6nsterbyte%2C%20d%C3%B6rrbyte%2C%20till%C3%A4ggsisolering%2C%20m%C3%B6gelbehandling%2C%20ventilation%2C%20torrsugning%29%3A%0AAdress%20och%20postnummer%3A%0AHustyp%20och%20bygg%C3%A5r%3A%0AUngef%C3%A4rligt%20antal%20f%C3%B6nster%2Fd%C3%B6rrar%3A%0A%C3%96nskad%20tidsplan%3A%0A%0ANamn%3A%0ATelefon%3A%0A">Boka hembesök</a>
+  </div>
+</div>
+<main id="main">
+<section class="hero short">
+  <div class="hero-bg">
+    <img src="https://jotab.nu/assets/window-red-facade-BJf-30tF.jpg" alt="Röd husfasad med vitt spröjsat fönster." width="1090" height="1148" fetchpriority="high" decoding="async">
+  </div>
+  <div class="hero-in"><div class="wrap hero-main">
+    <span class="kic">Projekt</span>
+    <h1>Verkliga fönster- och dörrbyten.</h1>
+    <p class="hero-sub">Projekt vi genomfört, med bilder före, under och efter arbetet. Dra i reglagen för att se skillnaden på samma hus, i samma vinkel.</p>
+    <div class="hero-cta">
+      <a class="btn btn-lg btn-blue" href="mailto:info@jotab.nu?subject=F%C3%B6rfr%C3%A5gan%20om%20kostnadsfritt%20hembes%C3%B6k%20%E2%80%93%20Jotab&body=Hej%21%0A%0AJag%20vill%20boka%20ett%20kostnadsfritt%20hembes%C3%B6k.%0A%0AIntresserad%20av%20%28f%C3%B6nsterbyte%2C%20d%C3%B6rrbyte%2C%20till%C3%A4ggsisolering%2C%20m%C3%B6gelbehandling%2C%20ventilation%2C%20torrsugning%29%3A%0AAdress%20och%20postnummer%3A%0AHustyp%20och%20bygg%C3%A5r%3A%0AUngef%C3%A4rligt%20antal%20f%C3%B6nster%2Fd%C3%B6rrar%3A%0A%C3%96nskad%20tidsplan%3A%0A%0ANamn%3A%0ATelefon%3A%0A">Boka kostnadsfritt hembesök</a>
+      <a class="btn btn-lg btn-dim" href="tel:+46103001315"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.3 1.7 5 1.3l1.6 3.2-1.4 1c.6 1.3 1.6 2.3 2.9 2.9l1-1.4 3.2 1.6-.4 1.7c-.2.7-.8 1.1-1.5 1C5.9 10.6 2.7 7.4 2.3 3.2c-.1-.7.3-1.3 1-1.5Z" fill="currentColor"/></svg> <span class="num">010-300 13 15</span></a>
+    </div>
+  </div></div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+  <article class="proj rv">
+    <div class="proj-head">
+      <div>
+        <h3>Fönster- och dörrbyte i varmgrått, enplansvilla i Kisa</h3>
+        <div class="meta"><span>Fönster &amp; dörrbyte</span><span>Kisa, Kinda kommun</span><span>ca 13 enheter</span></div>
+      </div>
+      <p>En enplansvilla med mörkgrå liggande träpanel fick samtliga fönster och altandörren utbytta, totalt cirka 13 enheter i färgen varmgrå. De gamla enheterna var målade i ljusgrönt och hade tydligt slitage i karmar och bågar efter många år i väder och vind. De nya fönstren behåller husets spröjsindelning men i en varmgrå kulör som ramar in den mörka panelen och de vita fodren. Befintliga markiser återmonterades över de fönster som hade dem, och altandörren ersattes med en ny dörr med glasparti upptill och släta speglar nedtill.</p>
+    </div>
+      <div style="display:grid;gap:clamp(18px,2.4vw,30px);margin-bottom:clamp(18px,2.2vw,28px)">
+      <div class="rv">
+        <div class="cmp">
+          <figure><img src="https://jotab.nu/projects/kisa-varmgra-altandorr-fonster-fore.jpeg" alt="Före bytet." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Före</figcaption></figure>
+          <figure><img src="https://jotab.nu/projects/kisa-varmgra-altandorr-fonster-efter.jpeg" alt="Efter bytet." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Efter</figcaption></figure>
+        </div>
+        <p class="ba-cap">Altandörrspartiet före och efter. De gamla enheterna var målade i ljusgrönt; de nya är varmgrå med glasparti upptill.</p>
+      </div>
+      <div class="rv">
+        <div class="cmp">
+          <figure><img src="https://jotab.nu/projects/kisa-varmgra-fonster-markis-fore.jpeg" alt="Före bytet." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Före</figcaption></figure>
+          <figure><img src="https://jotab.nu/projects/kisa-varmgra-fonster-markis-efter.jpeg" alt="Efter bytet." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Efter</figcaption></figure>
+        </div>
+        <p class="ba-cap">Ett av fönstren före och efter bytet. Markisen monterades tillbaka ovanför det nya fönstret.</p>
+      </div>
+      </div>
+      <div class="shots">
+        <a href="https://jotab.nu/projects/kisa-varmgra-fonster-sprojs-stort.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/kisa-varmgra-fonster-sprojs-stort.jpeg" alt="Bild från projektet Fönster- och dörrbyte i varmgrått, enplansvilla i Kisa." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/kisa-varmgra-fasad-tva-fonster.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/kisa-varmgra-fasad-tva-fonster.jpeg" alt="Bild från projektet Fönster- och dörrbyte i varmgrått, enplansvilla i Kisa." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/kisa-varmgra-gavel-tva-fonster-fore.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/kisa-varmgra-gavel-tva-fonster-fore.jpeg" alt="Bild från projektet Fönster- och dörrbyte i varmgrått, enplansvilla i Kisa." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/kisa-varmgra-fonster-lucka-fore.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/kisa-varmgra-fonster-lucka-fore.jpeg" alt="Bild från projektet Fönster- och dörrbyte i varmgrått, enplansvilla i Kisa." width="1200" height="1600" loading="lazy" decoding="async"></a>
+      </div>
+  </article>
+
+  <article class="proj rv">
+    <div class="proj-head">
+      <div>
+        <h3>Komplett fönster- och dörrbyte i tegelvilla</h3>
+        <div class="meta"><span>Fönster &amp; dörrbyte</span><span>Vit tegelfasad</span><span>Glaslyft</span></div>
+      </div>
+      <p>Totalrenovering av fönster och dörrar i en klassisk enplansvilla med vit tegelfasad. Gamla vita fönster ersattes med moderna energieffektiva fönster med svart exteriör, och en ny vinröd pardörr med glasinsatser ger entrén ett helt nytt uttryck. Projektet genomfördes med professionell glaslyftutrustning för säker hantering av de stora fönsterpartierna.</p>
+    </div>
+      <div class="grid g2" style="background:transparent;border:0;border-radius:0;gap:clamp(16px,2vw,28px);margin-bottom:clamp(18px,2.2vw,28px)">
+        <figure class="rv" style="margin:0">
+          <div class="ba">
+            <img src="https://jotab.nu/projects/tegelvilla-svart-fonster-dorr-fore.jpeg" alt="Före bytet." width="1200" height="1600" loading="lazy" decoding="async">
+            <img class="after" src="https://jotab.nu/projects/tegelvilla-svart-fonster-dorr-efter.jpeg" alt="Efter bytet." width="1200" height="1600" loading="lazy" decoding="async">
+            <span class="tag l">Före</span><span class="tag r">Efter</span>
+            <span class="bar" aria-hidden="true"></span><span class="knob" aria-hidden="true"></span>
+            <input type="range" min="0" max="100" value="50" id="ba3"
+              aria-label="Dra för att jämföra före och efter">
+          </div>
+          <figcaption class="ba-cap">Fönsterparti och dörr — dra för att jämföra.</figcaption>
+        </figure>
+      </div>
+      <div class="shots">
+        <a href="https://jotab.nu/projects/tegelvilla-svart-ytterdorr-vinrod.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/tegelvilla-svart-ytterdorr-vinrod.jpeg" alt="Bild från projektet Komplett fönster- och dörrbyte i tegelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/tegelvilla-svart-sugklocka-installation.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/tegelvilla-svart-sugklocka-installation.jpeg" alt="Bild från projektet Komplett fönster- och dörrbyte i tegelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/tegelvilla-svart-sugkoppar-demontering.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/tegelvilla-svart-sugkoppar-demontering.jpeg" alt="Bild från projektet Komplett fönster- och dörrbyte i tegelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/tegelvilla-svart-fonster-fore.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/tegelvilla-svart-fonster-fore.jpeg" alt="Bild från projektet Komplett fönster- och dörrbyte i tegelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+      </div>
+  </article>
+
+  <article class="proj rv">
+    <div class="proj-head">
+      <div>
+        <h3>Helrenovering av fönster och ytterdörr i tegelvilla</h3>
+        <div class="meta"><span>Fönster &amp; dörrbyte</span><span>Vitputsad tegelvilla</span><span>Svart exteriör, vit interiör</span></div>
+      </div>
+      <p>Samtliga fönster och ytterdörren i en vitputsad tegelvilla byttes till energieffektiva enheter med svart exteriör och vit interiör. Från panoramafönster i vardagsrummet och köksfönster till källarfönster och en ny faluröd pardörr med smäckra glaspartier — allt bidrar till lägre energikostnader och ett modernare uttryck.</p>
+    </div>
+      <div class="shots">
+        <a href="https://jotab.nu/projects/villa18-panoramafonster.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/villa18-panoramafonster.jpeg" alt="Bild från projektet Helrenovering av fönster och ytterdörr i tegelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/villa18-ytterdorr-rod.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/villa18-ytterdorr-rod.jpeg" alt="Bild från projektet Helrenovering av fönster och ytterdörr i tegelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/villa18-kokfonster.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/villa18-kokfonster.jpeg" alt="Bild från projektet Helrenovering av fönster och ytterdörr i tegelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/villa18-fonster-interior-utsikt.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/villa18-fonster-interior-utsikt.jpeg" alt="Bild från projektet Helrenovering av fönster och ytterdörr i tegelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/villa18-fasad-oversikt.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/villa18-fasad-oversikt.jpeg" alt="Bild från projektet Helrenovering av fönster och ytterdörr i tegelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/villa18-altandorr.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/villa18-altandorr.jpeg" alt="Bild från projektet Helrenovering av fönster och ytterdörr i tegelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/villa18-kallarfonster.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/villa18-kallarfonster.jpeg" alt="Bild från projektet Helrenovering av fönster och ytterdörr i tegelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/villa18-fonsterbleck-detalj.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/villa18-fonsterbleck-detalj.jpeg" alt="Bild från projektet Helrenovering av fönster och ytterdörr i tegelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+      </div>
+  </article>
+
+  <article class="proj rv">
+    <div class="proj-head">
+      <div>
+        <h3>Fönster- och altandörrsbyte med klassiska spröjsar</h3>
+        <div class="meta"><span>Fönsterbyte</span><span>Mörk träpanel</span><span>Vita spröjsar</span></div>
+      </div>
+      <p>I en charmig villa med mörk träpanel och vitmålat tegelannex byttes fönster och altandörr till nya enheter med vita ramar och dekorativa spröjsar som bevarar husets karaktär. Projektet inkluderade altandörr med fast sidoparti, badrumsfönster med frostat glas och fönster i det intilliggande tegelhuset.</p>
+    </div>
+      <div class="shots">
+        <a href="https://jotab.nu/projects/villa-sprojs-altandorr-exterior.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/villa-sprojs-altandorr-exterior.jpeg" alt="Bild från projektet Fönster- och altandörrsbyte med klassiska spröjsar." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/villa-sprojs-altandorr-interior.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/villa-sprojs-altandorr-interior.jpeg" alt="Bild från projektet Fönster- och altandörrsbyte med klassiska spröjsar." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/villa-sprojs-badrum-frostat.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/villa-sprojs-badrum-frostat.jpeg" alt="Bild från projektet Fönster- och altandörrsbyte med klassiska spröjsar." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/villa-sprojs-tegel-fasad.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/villa-sprojs-tegel-fasad.jpeg" alt="Bild från projektet Fönster- och altandörrsbyte med klassiska spröjsar." width="1200" height="1600" loading="lazy" decoding="async"></a>
+      </div>
+  </article>
+
+  <article class="proj rv">
+    <div class="proj-head">
+      <div>
+        <h3>Fönsterbyte i klassisk träpanelvilla</h3>
+        <div class="meta"><span>Fönsterbyte</span><span>Gröngrå stående panel</span><span>Helt hus</span></div>
+      </div>
+      <p>En traditionell svensk villa med stående gröngråmålad träpanel fick alla fönster utbytta. Nya vita fönster med utvändig beklädnad i husets färg smälter in i fasaden och ger markant bättre isolering. Projektet sträckte sig från vardagsrum och kök till badrum, trapphus och veranda — totalt ett helt hus.</p>
+    </div>
+      <div class="shots">
+        <a href="https://jotab.nu/projects/trapanel-fasad-oversikt.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/trapanel-fasad-oversikt.jpeg" alt="Bild från projektet Fönsterbyte i klassisk träpanelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/trapanel-fonster-veranda.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/trapanel-fonster-veranda.jpeg" alt="Bild från projektet Fönsterbyte i klassisk träpanelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/trapanel-fonster-interior-tapeter.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/trapanel-fonster-interior-tapeter.jpeg" alt="Bild från projektet Fönsterbyte i klassisk träpanelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/trapanel-installation-pagaende.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/trapanel-installation-pagaende.jpeg" alt="Bild från projektet Fönsterbyte i klassisk träpanelvilla." width="1200" height="1600" loading="lazy" decoding="async"></a>
+      </div>
+  </article>
+
+  <article class="proj rv">
+    <div class="proj-head">
+      <div>
+        <h3>Byte av ytterdörr</h3>
+        <div class="meta"><span>Dörrbyte</span><span>Före och efter</span></div>
+      </div>
+      <p>En sliten ytterdörr i trä ersattes med en ny, tät och välisolerad dörr. Ett litet ingrepp med stor skillnad både för entréns uttryck och för draget i hallen.</p>
+    </div>
+      <div class="grid g2" style="background:transparent;border:0;border-radius:0;gap:clamp(16px,2vw,28px);margin-bottom:clamp(18px,2.2vw,28px)">
+        <figure class="rv" style="margin:0">
+          <div class="ba">
+            <img src="https://jotab.nu/projects/ytterdorr-7-fore.jpeg" alt="Före bytet." width="1200" height="1600" loading="lazy" decoding="async">
+            <img class="after" src="https://jotab.nu/projects/ytterdorr-7-efter.jpeg" alt="Efter bytet." width="1200" height="1600" loading="lazy" decoding="async">
+            <span class="tag l">Före</span><span class="tag r">Efter</span>
+            <span class="bar" aria-hidden="true"></span><span class="knob" aria-hidden="true"></span>
+            <input type="range" min="0" max="100" value="50" id="ba4"
+              aria-label="Dra för att jämföra före och efter">
+          </div>
+          <figcaption class="ba-cap">Ytterdörr — dra för att jämföra före och efter.</figcaption>
+        </figure>
+      </div>
+      <div class="shots">
+        <a href="https://jotab.nu/projects/tegelvilla60-balkongdorr-exterior.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/tegelvilla60-balkongdorr-exterior.jpeg" alt="Bild från projektet Byte av ytterdörr." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/tegelvilla60-balkongdorr-interior.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/tegelvilla60-balkongdorr-interior.jpeg" alt="Bild från projektet Byte av ytterdörr." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/tegelvilla60-kokfonster.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/tegelvilla60-kokfonster.jpeg" alt="Bild från projektet Byte av ytterdörr." width="1200" height="1600" loading="lazy" decoding="async"></a>
+        <a href="https://jotab.nu/projects/tegelvilla60-fasad-oversikt.jpeg" target="_blank" rel="noopener"><img src="https://jotab.nu/projects/tegelvilla60-fasad-oversikt.jpeg" alt="Bild från projektet Byte av ytterdörr." width="1200" height="1600" loading="lazy" decoding="async"></a>
+      </div>
+  </article>
+
+  </div>
+</section>
+
+<section class="sec" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="head">
+      <div class="rv"><span class="kic">Omdömen</span>
+      <h2>Vad kunderna säger.</h2></div>
+    </div>
+    <div class="score rv"><b class="num">4,4</b><span class="stars" aria-hidden="true">★★★★★</span><span>av 5 på <a href="https://se.trustpilot.com/review/jotab.nu" target="_blank" rel="noopener" style="color:var(--blue-d);font-weight:600">Trustpilot</a></span></div>
+    <div class="revs rv">
+      <figure class="rev"><div class="stars" aria-label="5 av 5">★★★★★</div><blockquote>”Mycket nöjd med mitt fönsterbyte. Morgan och gänget var superproffsiga och bytte våra fönster och altandörr både snabbt och försiktigt utan några skador på putsen. Snabba svar på frågor och trevligt bemötande från första besök.”</blockquote><footer><b>Anders Johansson</b><span>Stockholm</span><a href="https://se.trustpilot.com/review/jotab.nu" target="_blank" rel="noopener">Läs på Trustpilot</a></footer></figure>
+      <figure class="rev"><div class="stars" aria-label="5 av 5">★★★★★</div><blockquote>”Vi är otroligt nöjda med Jotab och deras arbete när vi bytte fönster och ytterdörr. Helle skötte offertprocessen helt perfekt med snabba svar på våra frågor. Morgan jobbade snabbt och effektivt med hög kvalitet. Vi kan varmt rekommendera Jotab!”</blockquote><footer><b>Erik Andersson</b><span>Stockholm</span><a href="https://se.trustpilot.com/review/jotab.nu" target="_blank" rel="noopener">Läs på Trustpilot</a></footer></figure>
+      <figure class="rev"><div class="stars" aria-label="5 av 5">★★★★★</div><blockquote>”Suveränt 100% seriöst företag. Oliver skicklig och kunnig fönstermästare. Fredrik med personal, duktiga och trevliga snickare. Jättesmidigt från beställning till färdig montering. Rekommenderas alla dagar i veckan!”</blockquote><footer><b>Maria Lundberg</b><span>Västervik</span><a href="https://se.trustpilot.com/review/jotab.nu" target="_blank" rel="noopener">Läs på Trustpilot</a></footer></figure>
+      <figure class="rev"><div class="stars" aria-label="5 av 5">★★★★★</div><blockquote>”Vår upplevelse av Jotab har varit fem av fem från början till slut. Petter A var fantastisk i sitt bemötande och svarade kunnigt på samtliga frågor vi ställde. Slutresultatet blev över förväntan och vi känner oss trygga i att kunna kontakta Jotab i framtiden om behov skulle uppstå!”</blockquote><footer><b>Martin Wik Johansson</b><span>Göteborg</span><a href="https://se.trustpilot.com/review/jotab.nu" target="_blank" rel="noopener">Läs på Trustpilot</a></footer></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-label="Vill du se hur det skulle se ut på ditt hus?">
+  <img src="https://jotab.nu/assets/window-red-facade-BJf-30tF.jpg" alt="" width="1090" height="1148" loading="lazy" decoding="async">
+  <div class="inner">
+    <span class="kic">Kostnadsfritt hembesök</span>
+    <h2>Vill du se hur det skulle se ut på ditt hus?</h2>
+    <p>Boka ett kostnadsfritt hembesök — vi mäter, visar alternativ och lämnar en offert.</p>
+    <div class="hero-cta">
+      <a class="btn btn-lg btn-blue" href="mailto:info@jotab.nu?subject=F%C3%B6rfr%C3%A5gan%20om%20kostnadsfritt%20hembes%C3%B6k%20%E2%80%93%20Jotab&body=Hej%21%0A%0AJag%20vill%20boka%20ett%20kostnadsfritt%20hembes%C3%B6k.%0A%0AIntresserad%20av%20%28f%C3%B6nsterbyte%2C%20d%C3%B6rrbyte%2C%20till%C3%A4ggsisolering%2C%20m%C3%B6gelbehandling%2C%20ventilation%2C%20torrsugning%29%3A%0AAdress%20och%20postnummer%3A%0AHustyp%20och%20bygg%C3%A5r%3A%0AUngef%C3%A4rligt%20antal%20f%C3%B6nster%2Fd%C3%B6rrar%3A%0A%C3%96nskad%20tidsplan%3A%0A%0ANamn%3A%0ATelefon%3A%0A">Boka hembesök</a>
+      <a class="btn btn-lg btn-dim" href="tel:+46103001315"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.3 1.7 5 1.3l1.6 3.2-1.4 1c.6 1.3 1.6 2.3 2.9 2.9l1-1.4 3.2 1.6-.4 1.7c-.2.7-.8 1.1-1.5 1C5.9 10.6 2.7 7.4 2.3 3.2c-.1-.7.3-1.3 1-1.5Z" fill="currentColor"/></svg> <span class="num">010-300 13 15</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="mark"><img src="https://jotab.nu/assets/logo-main-sm-Cnula_cj.png" alt="Jotab Fönster &amp; Dörrar" width="640" height="384" loading="lazy" decoding="async"></span>
+        <p class="bio">Din trygga leverantör av fönster, dörrar och energibesparande åtgärder i Stockholm, Göteborg, Kalmar län och Östergötlands län.</p>
+      </div>
+      <div>
+        <h4>Tjänster</h4>
+        <ul>
+          <li><a href="fonster-dorrar.html">Fönster- och dörrbyte</a></li>
+          <li><a href="klimat.html#isolering">Tilläggsisolering</a></li>
+          <li><a href="klimat.html#mogelbehandling">Mögelbehandling</a></li>
+          <li><a href="klimat.html#ventilation">Ventilation</a></li>
+          <li><a href="klimat.html#torrsugning">Torrsugning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sidor</h4>
+        <ul>
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="projekt.html">Projekt</a></li>
+          <li><a href="om-oss.html">Om oss</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="https://se.trustpilot.com/review/jotab.nu" target="_blank" rel="noopener">Omdömen på Trustpilot</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a class="num" href="tel:+46103001315">010-300 13 15</a></li>
+          <li><a href="mailto:info@jotab.nu">info@jotab.nu</a></li>
+          <li>Mån–fre 08:00–16:00</li>
+          <li><a href="https://www.instagram.com/jotab_fonsterdorrar" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=100093856174852" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 Jotab fönster &amp; dörrar AB · Org.nr <span class="num">559435-8508</span></span>
+      <span>Stockholm · Göteborg · Kalmar län · Östergötlands län</span>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c1" href="tel:+46103001315"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.3 1.7 5 1.3l1.6 3.2-1.4 1c.6 1.3 1.6 2.3 2.9 2.9l1-1.4 3.2 1.6-.4 1.7c-.2.7-.8 1.1-1.5 1C5.9 10.6 2.7 7.4 2.3 3.2c-.1-.7.3-1.3 1-1.5Z" fill="currentColor"/></svg> Ring oss</a>
+  <a class="c2" href="mailto:info@jotab.nu?subject=F%C3%B6rfr%C3%A5gan%20om%20kostnadsfritt%20hembes%C3%B6k%20%E2%80%93%20Jotab&body=Hej%21%0A%0AJag%20vill%20boka%20ett%20kostnadsfritt%20hembes%C3%B6k.%0A%0AIntresserad%20av%20%28f%C3%B6nsterbyte%2C%20d%C3%B6rrbyte%2C%20till%C3%A4ggsisolering%2C%20m%C3%B6gelbehandling%2C%20ventilation%2C%20torrsugning%29%3A%0AAdress%20och%20postnummer%3A%0AHustyp%20och%20bygg%C3%A5r%3A%0AUngef%C3%A4rligt%20antal%20f%C3%B6nster%2Fd%C3%B6rrar%3A%0A%C3%96nskad%20tidsplan%3A%0A%0ANamn%3A%0ATelefon%3A%0A"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M1.5 3.5h13v9h-13v-9Z" stroke="currentColor" stroke-width="1.4"/><path d="m1.8 4 6.2 4.4L14.2 4" stroke="currentColor" stroke-width="1.4"/></svg> Boka hembesök</a>
+</div>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),hero=document.querySelector('.hero');
+  function solid(v){nav.classList.toggle('solid',v)}
+  if(hero){
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){es.forEach(function(e){solid(!e.isIntersecting)})},
+        {rootMargin:'-76px 0px 0px 0px',threshold:0}).observe(hero);
+    }
+    window.addEventListener('scroll',function(){solid(window.scrollY>hero.offsetHeight-76)},{passive:true});
+  }else{nav.classList.add('solid')}
+
+  var b=document.getElementById('burger'),d=document.getElementById('drawer'),c=document.getElementById('dclose');
+  function setOpen(o){
+    d.classList.toggle('open',o);d.setAttribute('aria-hidden',o?'false':'true');
+    b.setAttribute('aria-expanded',o?'true':'false');
+    b.setAttribute('aria-label',o?'Stäng meny':'Öppna meny');
+    document.documentElement.style.overflow=o?'hidden':'';
+    if(o){c.focus()}else{b.focus()}
+  }
+  b.addEventListener('click',function(){setOpen(true)});
+  c.addEventListener('click',function(){setOpen(false)});
+  d.addEventListener('click',function(e){if(e.target.tagName==='A'){setOpen(false)}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.classList.contains('open')){setOpen(false)}});
+
+  // Entrétoning: signalerar läsordning, inget mer.
+  var rv=document.querySelectorAll('.rv,.framed');
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+    },{rootMargin:'0px 0px -8% 0px',threshold:.06});
+    rv.forEach(function(el){io.observe(el)});
+  }else{rv.forEach(function(el){el.classList.add('in')})}
+
+  // Före/efter: range-input bakom bilden ger drag, tangentbord och skärmläsare gratis.
+  document.querySelectorAll('.ba').forEach(function(ba){
+    var r=ba.querySelector('input[type=range]');
+    function set(){ba.style.setProperty('--p',r.value+'%')}
+    r.addEventListener('input',set);set();
+  });
+})();
+</script>
+</body>
+</html>
